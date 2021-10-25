@@ -11,10 +11,9 @@ Food and Agriculture Organization of the United Nations (FAO)
 - **Geographic coverage:** Global
 - **Date of content:** 1950-2019
 - **Frequency of updates:** Yearly 
+#### Learn more about the data [here](https://www.fao.org/fishery/statistics/) 
 
-#### [Learn more about the data](https://www.fao.org/fishery/statistics/) 
-
-#### Download the data
+### Download the data
 [Total fishery production](https://www.fao.org/fishery/statistics/global-production/en) <br/> 
 [Aquaculture production](https://www.fao.org/fishery/statistics/global-aquaculture-production/en) <br/>
 [Capture production](https://www.fao.org/fishery/statistics/global-capture-production/en) <br/>
