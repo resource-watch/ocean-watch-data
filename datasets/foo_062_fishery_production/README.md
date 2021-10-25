@@ -11,6 +11,7 @@ Food and Agriculture Organization of the United Nations (FAO)
 - **Geographic coverage:** Global
 - **Date of content:** 1950-2019
 - **Frequency of updates:** Yearly 
+
 <br/>*Learn more about the data [here](https://www.fao.org/fishery/statistics/)*
 
 ### Download the data
