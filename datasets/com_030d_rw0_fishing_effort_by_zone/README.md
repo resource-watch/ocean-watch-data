@@ -15,7 +15,7 @@ Global Fishing Watch
 <br/>*Learn more about the data [here](https://globalfishingwatch.org/dataset-and-code-fishing-effort/)*
 
 ### Download the data
-[{source dataset name}](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
+[Fishing effort](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
 
 ### Pre-processing
 The Ocean Watch data team used a [python script]({link-to-script}) to request data and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_030d_fishing_effort_by_zone)
