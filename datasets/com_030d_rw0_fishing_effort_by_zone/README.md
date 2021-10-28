@@ -2,7 +2,7 @@
 This file describes the Fishing Effort by Zone dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Time spent fishing within each EEZ (or other zone) disaggregated by year, as detected using an Automatic Identification System (AIS)"
+Time spent fishing within each EEZ (or other zone) disaggregated by year, as detected using an Automatic Identification System (AIS)
 
 ### Source
 Global Fishing Watch 
