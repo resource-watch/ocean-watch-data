@@ -10,6 +10,8 @@ Global Fishing Watch
 ### About the data
 - **Geographic coverage:** Global
 - **Date of content:** 2012-2020
+- **Data type:** Tabular
+- **Spatial resolution:** National
 - **Frequency of updates:** Yearly
 
 <br/>*Learn more about the data [here](https://globalfishingwatch.org/dataset-and-code-fishing-effort/)*

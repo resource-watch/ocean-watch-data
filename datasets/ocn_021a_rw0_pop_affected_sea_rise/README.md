@@ -10,6 +10,8 @@ WorldPop and Climate Central
 ### About the data
 - **Geographic coverage:** Global coastline
 - **Date of content:** 2020
+- **Data type:** Raster
+- **Spatial resolution:** 100m
 - **Frequency of updates:** Yearly
 
 <br/>*Learn more about the [Global population](https://resourcewatch.org/data/explore/d6e42176-90c4-429d-8cae-7619c545a458) and the [Projected sea-level rise](https://resourcewatch.org/data/explore/Projected-Sea-Level-Rise) data on [Resource Wacth](https://resourcewatch.org/)*

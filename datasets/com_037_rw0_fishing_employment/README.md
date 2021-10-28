@@ -8,8 +8,10 @@ The number of people employed in natural sectors activities (Agriculture, huntin
 International Labour Organization
 
 ### About the data
-- **Geographic coverage:** 214 countries and territories
+- **Geographic coverage:** Global
 - **Date of content:** 1992-2020
+- **Data type:** Tabular
+- **Spatial resolution:** National
 - **Frequency of updates:** Yearly
 
 <br/>*Learn more about the data [here](https://ilostat.ilo.org/data/#)*
