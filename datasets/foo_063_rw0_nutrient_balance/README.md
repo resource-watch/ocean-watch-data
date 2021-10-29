@@ -20,7 +20,7 @@ The Organisation for Economic Co-operation and Development (OECD)
 [Agri-Environmental indicators: Nutrients](https://stats.oecd.org/viewhtml.aspx?datasetcode=AEI_NUTRIENTS&lang=en) 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script]({link-to-script}) to {description of processing} and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/foo_063_rw0_nutrient_balance_edit)
+The Ocean Watch data team used a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/datasets/foo_063_rw0_nutrient_balance/foo_063_rw0_nutrient_balance_processing.py) to {description of processing} and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/foo_063_rw0_nutrient_balance_edit)
 
 ### Citation
 OECD (2021), Nutrient balance (indicator) \[Data set]. Available from https://stats.oecd.org.

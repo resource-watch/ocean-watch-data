@@ -20,7 +20,7 @@ U. Rashid Sumaila et al.
 [A global dataset on subsidies to the fisheries sector](https://www.sciencedirect.com/science/article/pii/S2352340919310613) 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script]({link-to-script}) to upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_022_rw0_fisheries_subsidies_edit)
+The Ocean Watch data team used a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/datasets/ocn_022_rw0_fishery_subsidies/ocn_022_rw0_fisheries_subsidies_processing.py) to upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_022_rw0_fisheries_subsidies_edit)
 
 ### Citation
 Sumaila U. R.; Skerritt, D; Schuhbauer, A.; Ebrahim, N; Li, Y; Kim, H.S.; Mallory, T.G.; Lam, V.W.L.; Pauly, D. (2019).
