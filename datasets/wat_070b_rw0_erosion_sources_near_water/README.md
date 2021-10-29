@@ -1,5 +1,5 @@
 ## Sources of Erosion near Water Bodies Dataset
-This file describes the Sources of erosion near water bodies dataset on [Ocean Watch](https://www.oceanwatchdata.org)
+This file describes the Sources of Erosion near Water Bodies dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
 Highlights areas of high soil erosion potential (>50%) within 7 meters of river banks.
