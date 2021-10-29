@@ -10,7 +10,7 @@ World Agroforestry Centre (ICRAF), Global River Width from Landsat (GRWL), Hydro
 ### About the data
 - **Geographic coverage:** Global
 - **Date of content:** 2020
-- **Data type:** Rater
+- **Data type:** Raster
 - **Spatial resolution:** 20m
 - **Frequency of updates:** Dependent on availabilty of soil erosion prevalence data
 
