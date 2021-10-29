@@ -14,7 +14,7 @@ World Agroforestry Centre (ICRAF), Global River Width from Landsat (GRWL), Hydro
 - **Spatial resolution:** 20m
 - **Frequency of updates:** Dependent on availabilty of soil erosion prevalence data
 
-<br/>*Learn more about the underlying data: [Soil Erosion]({https://resourcewatch.org/data/explore/wat070rw0-Soil-Erosion), [River Widths](https://www.science.org/doi/10.1126/science.aat0636), [River Network](https://www.hydrosheds.org/page/hydrorivers)*
+<br/>*Learn more about the underlying data: [Soil Erosion](https://resourcewatch.org/data/explore/wat070rw0-Soil-Erosion), [River Widths](https://www.science.org/doi/10.1126/science.aat0636), [River Network](https://www.hydrosheds.org/page/hydrorivers)*
 
 ### Download the underlying data
 [Soil erosion in the global tropics (2002, 2007, 2012, 2017)](http://landscapeportal.org/maps/3037) <br/>
