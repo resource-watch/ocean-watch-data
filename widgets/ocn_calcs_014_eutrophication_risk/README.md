@@ -12,7 +12,7 @@ Data displayed in this widget comes from the [Aqueduct Coastal Eutrophication Po
 ## Processing
 To create the widget, the Ocean Watch data team processed the dataset using a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/widgets/ocn_calcs_014_eutrophication_risk/ocn_calcs_014_eutrophication_risk_processing.py). 
 
-**Synopsis:** We projected the sub-basin polygons from ICEP dataset into a projected coordinate system `(epsg:3395)`. Centroids of the polygons were calculated and transformed to a geographic coordiante system `(epsg:4326)`. The centroids were spatially joined to GADM country borders. We grouped the data by country and risk level to get the number of basins at each level within a country and globally and summed across risk levels to get total number of basins. Using these two values, we calculated the proportion of sub-basins at each ICEP level. The [processed table](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_calcs_014_eutrophication_risk) is stored on Carto.
+**Synopsis:** We projected the sub-basin polygons from the ICEP dataset into a projected coordinate system `(epsg:3395)`. Centroids of the polygons were calculated and transformed to a geographic coordiante system `(epsg:4326)`. The centroids were spatially joined to GADM country borders. We grouped the data by country and risk level to get the number of basins at each level within a country and globally and summed across risk levels to get total number of basins. Using these two values, we calculated the proportion of sub-basins at each ICEP level. The [processed table](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_calcs_014_eutrophication_risk) is stored on Carto.
 
 ## Supplemental Files 
 | File | Description |
