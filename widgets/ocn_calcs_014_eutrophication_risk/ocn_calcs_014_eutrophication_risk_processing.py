@@ -29,8 +29,8 @@ set_default_credentials(username=CARTO_USER, base_url="https://{user}.carto.com/
 logger.info('Pull ICEP Basins from Carto table')
 # read in Aqueduct Index Coastal Eutrophication Potentional Data (ICEP)
 gdf_icep= read_carto('wat_059_aqueduct_coastal_eutrophication_potential')
-# project to the a projected CRS
-gdf_icep.to_crs('epsg:3035', inplace=True)
+# project to a projected CRS
+gdf_icep.to_crs('epsg:3395', inplace=True)
 
 # assign basins to a country
 
@@ -43,7 +43,7 @@ gdf_icep.rename(columns = {'points': 'geometry'}, inplace = True)
 gdf_icep.drop(columns=['the_geom'], inplace= True)
 # create a new geodataframe with the centroids as the geometry and set CRS
 gdf_icep =gpd.GeoDataFrame(gdf_icep)
-gdf_icep.set_crs('epsg:3035', inplace=True)
+gdf_icep.set_crs('epsg:3395', inplace=True)
 # reproject CRS to geographic CRS to match gadm polygons
 gdf_icep.to_crs('epsg:4326', inplace=True)
 
