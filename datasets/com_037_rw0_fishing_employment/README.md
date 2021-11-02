@@ -23,7 +23,7 @@ International Labour Organization
 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/datasets/com_037_rw0_fishing_employment/com_037_rw0_fishing_employment_processing.py) to aggregate and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_037_rw0_fishing_employment_edit)
+The Ocean Watch data team used a [python script](com_037_rw0_fishing_employment_processing.py) to aggregate and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_037_rw0_fishing_employment_edit)
 
 ### Citation
 International Labour Organization. (2020). ILOSTAT database \[database]. Available from https://ilostat.ilo.org/data/.
