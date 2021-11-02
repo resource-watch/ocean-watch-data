@@ -20,7 +20,7 @@ The Organisation for Economic Co-operation and Development (OECD)
 [Protected areas: Marine protected area](https://stats.oecd.org) 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/datasets/ocn_023_rw1_marine_protection/ocn_023_rw1_marine_protection_processing.py) to subset and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_023_rw1_marine_protection_edit)
+The Ocean Watch data team used a [python script](ocn_023_rw1_marine_protection_processing.py) to subset and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_023_rw1_marine_protection_edit)
 
 ### Citation
 OECD (2021), [Protected areas: Marine protected area \[Data set]. Available from https://stats.oecd.org.
