@@ -2,7 +2,7 @@
 This file describes the Protection of Key Biodviery Areas Dataset dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Time series of the average proportion of Key Biodiversity Areas that are currently protected within the EEZ of a given country or territory. Key Biodiversity Areas (KBA) are ‘sites that contribute to the global persistence of biodiversity’.
+Time series of the average proportion of Key Biodiversity Areas that are currently protected within the EEZ of a given country or territory. Key Biodiversity Areas (KBA) are ‘sites that contribute to the global persistence of biodiversity.’
 
 ### Source
 Birdlife International
