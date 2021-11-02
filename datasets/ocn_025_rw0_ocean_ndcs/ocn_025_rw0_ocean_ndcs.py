@@ -101,6 +101,12 @@ df = pd.concat([df, df_world]).reset_index()
 df=df.drop(['index','id','country','source', 'global_category', 'overview_category'], axis = 1)
 
 
+
+cm = df.loc[df['indicator_id'] == 'a_coastal_fisheries_auto']
+cm = cm.loc[cm['value'] == 'Sectoral Measure Specified']
+print(len(cm['value']))
+
+
 logger.info('Upload dataframe to Carto')
 # upload data frame to Carto
 to_carto(df, 'ocn_025_rw0_ocean_ndc_measures', if_exists='replace')
