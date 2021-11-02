@@ -2,7 +2,7 @@
 This file describes the Population Affected by Sea Level Rise (Grid, 100m) dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Gridded estimated count of population in areas that will likely be flooded at different amounts rising water due to a combination of sea level rise, tide, and storm surge
+Gridded estimated count of population in areas that are likely to be flooded under different sea-level rise projections due to to a combination of sea level rise, tide, and storm surge
 
 ### Source
 WorldPop and Climate Central
