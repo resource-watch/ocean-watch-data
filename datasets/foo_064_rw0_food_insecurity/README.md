@@ -22,7 +22,7 @@ Food and Agriculture Organization of the United Nations (FAO)
 [Suite of Food Security Indicators](https://www.fao.org/faostat/en/#data/FS) 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script](https://github.com/resource-watch/ocean-watch-data/blob/main/datasets/foo_064_rw0_food_insecurity/foo_064_rw0_food_insecurity_processing.py) to subset and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/foo_064_rw0_food_insecurity_edit)
+The Ocean Watch data team used a [python script](foo_064_rw0_food_insecurity_processing.py) to subset and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/foo_064_rw0_food_insecurity_edit)
 
 ### Citation
 FAO (2021), Suite of Food Security Indicators (indicator) \[Data set]. Available from https://www.fao.org/faostat/en/#home.
