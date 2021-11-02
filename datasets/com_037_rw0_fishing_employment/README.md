@@ -2,7 +2,7 @@
 This file describes the Fishing Employment dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-The number of people employed in natural sectors activities (Agriculture, hunting, forestry, and fishing) in each country or territory, dissagreatted by economic activitiy, sex, and year.
+The number of people employed in natural sectors activities (agriculture, hunting, forestry, and fishing) in each country or territory, dissagreatted by economic activitiy, sex, and year.
 
 ### Source
 International Labour Organization
