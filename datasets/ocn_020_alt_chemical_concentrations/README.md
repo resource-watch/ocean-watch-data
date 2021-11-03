@@ -11,7 +11,7 @@ Copernicus Marine Environment Monitoring Service (CMEMS)
 - **Geographic coverage:** Global
 - **Date of content:** 2019-2021
 - **Data type:** Vector
-- **Spatial resolution:** {}
+- **Spatial resolution:** ~1/4° (source data)
 - **Frequency of updates:** Monthly
 
 <br/>*Learn more about the data [here](https://resources.marine.copernicus.eu/product-detail/GLOBAL_ANALYSIS_FORECAST_BIO_001_028/INFORMATION)*
