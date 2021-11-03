@@ -62,7 +62,6 @@ paginated_dfs = []
 for i in range(1,20):
     # format url with page number
     url = url_template.format(i)
-    print(url)
     # request the data
     req = requests.get(url)
     text_data= req.text
@@ -99,13 +98,6 @@ df = pd.concat([df, df_world]).reset_index()
 
 # drop unnecessary and blank columns 
 df=df.drop(['index','id','country','source', 'global_category', 'overview_category'], axis = 1)
-
-
-
-cm = df.loc[df['indicator_id'] == 'a_coastal_fisheries_auto']
-cm = cm.loc[cm['value'] == 'Sectoral Measure Specified']
-print(len(cm['value']))
-
 
 logger.info('Upload dataframe to Carto')
 # upload data frame to Carto
