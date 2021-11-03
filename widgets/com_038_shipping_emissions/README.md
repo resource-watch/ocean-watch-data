@@ -16,4 +16,4 @@ To create the widget, the Ocean Watch data team drew data directly from the [tab
 ## Supplemental Files 
 | File | Description |
 | --------------- | --------------- |
-|  [`{notebook-file-name}`]({local-link})  |    notebook describing the Vega specification to create the visualization| 
+|  [`shipping-emissions_visualization.ipynb`](shipping-emissions_visualization.ipynb)  |    notebook describing the Vega specification to create the visualization| 
