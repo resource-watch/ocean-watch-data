@@ -1,4 +1,4 @@
-# Protection of biodiversity hotspots widget
+# Biodiversity Widget
 This file describes the data and processing behind the [Protection of biodiversity hotspots widget](https://bit.ly/2WOze58) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
@@ -15,4 +15,4 @@ To create the widget, the Ocean Watch data team drew data directly from the [tab
 ## Supplemental Files 
 | File | Description |
 | --------------- | --------------- |
-|  [`biodiversity_hotspots_vizualization.ipynb`](biodiversity_hotspots_vizualization.ipynb)  |    notebook describing the Vega specification to create the visualization| 
+|  [`biodiversity_vizualization.ipynb`](biodiversity_vizualization.ipynb)  |    notebook describing the Vega specification to create the visualization| 

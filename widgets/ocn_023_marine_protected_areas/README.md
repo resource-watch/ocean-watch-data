@@ -1,4 +1,4 @@
-# Progress toward protecting 30% of the ocean widget
+# Marine Protected Areas Widget
 This file describes the data and processing behind the [Progress toward protecting 30% of the ocean widget](https://bit.ly/2Z25ORW) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction

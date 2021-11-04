@@ -1,4 +1,4 @@
-# Shipping emissions widgets
+# Marine Transport: Shipping Indicator Widgets
 This file describes the data and processing behind the [Shipping emissions: Top emitting countries](https://bit.ly/3aQtAml) and the [Proportion of national CO<sub>2</sub> emissions from shipping](https://bit.ly/3BI7C01) widgets on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction

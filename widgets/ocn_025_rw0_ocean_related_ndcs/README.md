@@ -1,4 +1,4 @@
-# Ocean-related measures in NDCs widget
+# Ocean and Climate Change Widget
 This file describes the data and processing behind the [Ocean-related measures in NDCs](https://bit.ly/3mu2dnC) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction

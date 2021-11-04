@@ -1,4 +1,4 @@
-# Food secuirty and dependence on marine protein widget
+# Ocean Dependence Indicator Widget
 This file describes the data and processing behind the [Food secuirty and dependence on marine protein widget](https://bit.ly/3BWhuE9) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction

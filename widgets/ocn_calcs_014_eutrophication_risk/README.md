@@ -1,4 +1,4 @@
-# Coastal Eutrophication Risk Widget
+# Land-Based Pollution Widget
 This file describes the data and processing behind the [Coastal Eutrophication widget](https://bit.ly/3BlgYiK) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
