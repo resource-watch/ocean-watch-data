@@ -2,7 +2,7 @@
 This file describes the Fishing Effort by Zone dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Time spent fishing within each EEZ (or other zone) disaggregated by year, as detected using an Automatic Identification System (AIS)
+Time spent fishing within each Exclusive Economic Zone (or other zone) disaggregated by year, as detected using an Automatic Identification System (AIS)
 
 ### Source
 Global Fishing Watch 
@@ -20,7 +20,7 @@ Global Fishing Watch
 [Fishing effort](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script]({link-to-script}) to request data and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_030d_fishing_effort_by_zone)
+The Ocean Watch data team used a [python script](fishing-effort_collect-data.py) to request data and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_030d_fishing_effort_by_zone). Data were requested through the Global Fishing Watch API. The API is still under construction and not available for use by the general public. Data was requested using polygons for Exclusive Economic Zones (`200NM`, 200 nautical miles from coastalin), overlapping claim areas, and joint regime areas from the [Maritime Boundaries dataset](https://resourcewatch.org/data/explore/com011rw1-Maritime-Boundaries) on Resource Watch. When requests failed, they were recorded and [an additional python script](fishing-effort_collect-data.py) was run to collect data for those areas.
 
 ### Citation
 D.A. Kroodsma, J. Mayorga, T. Hochberg, N.A. Miller, K. Boerder, F. Ferretti, A. Wilson, B. Bergman, T.D. White, B.A. Block, P. Woods, B. Sullivan, C. Costello, and B. Worm. "Tracking the global footprint of fisheries." Science 361.6378 (2018).

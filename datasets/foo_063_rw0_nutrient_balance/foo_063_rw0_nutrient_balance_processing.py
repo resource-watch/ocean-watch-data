@@ -4,12 +4,15 @@ import numpy as np
 import glob
 import os
 import sys
+
+# import util modules - requires cloning the resource-warch data-pre-processing repository (https://github.com/resource-watch/data-pre-processing)
 utils_path = os.path.join(os.path.abspath(os.getenv('PROCESSING_DIR')),'utils')
 if utils_path not in sys.path:
     sys.path.append(utils_path)
 import util_files
 import util_cloud
 import util_carto
+
 import requests
 from zipfile import ZipFile
 import shutil

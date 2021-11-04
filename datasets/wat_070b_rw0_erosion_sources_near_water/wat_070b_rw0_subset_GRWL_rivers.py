@@ -6,17 +6,20 @@
 # Description: 
 # ---------------------------------------------------------------------------
 
+import os
 # Import arcpy module
 import arcpy
+
+ARC_PROCESSING_DIR = os.getenv('ARC_PROCESSING_DIR')
 
 
 # Local variables:
 GRWL_projected = "GRWL_projected"
 GRWL_projected__2_ = GRWL_projected
-ne_10m_coastline_shp = "C:\\Users\\RThoms.Local\\Downloads\\ne_10m_coastline\\ne_10m_coastline.shp"
+ne_10m_coastline_shp = ARC_PROCESSING_DIR + "\\ne_10m_coastline\\ne_10m_coastline.shp"
 GRWL_projected__4_ = GRWL_projected__2_
-HydroRiv_5km_Buffer = "C:\\Users\\RThoms.Local\\OneDrive - World Resources Institute\\Documents\\ArcGIS\\Sediment Pressure\\Sediment Pressure.gdb\\HydroRiv_5km_Buffer"
-GRWL_selection_coast_and_rivers = "C:\\Users\\RThoms.Local\\OneDrive - World Resources Institute\\Documents\\ArcGIS\\Sediment Pressure\\Sediment Pressure.gdb\\GRWL_selection_coast_and_rivers"
+HydroRiv_5km_Buffer = ARC_PROCESSING_DIR + "\\Sediment Pressure\\Sediment Pressure.gdb\\HydroRiv_5km_Buffer"
+GRWL_selection_coast_and_rivers = ARC_PROCESSING_DIR + "\\Sediment Pressure\\Sediment Pressure.gdb\\GRWL_selection_coast_and_rivers"
 
 # Process: Select Layer By Location
 arcpy.SelectLayerByLocation_management(GRWL_projected, "WITHIN_A_DISTANCE_GEODESIC", ne_10m_coastline_shp, "5 Kilometers", "NEW_SELECTION", "NOT_INVERT")
