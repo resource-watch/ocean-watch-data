@@ -8,7 +8,7 @@ The difference between the total quantity of nutrient inputs entering an agricul
 The Organisation for Economic Co-operation and Development (OECD)
 
 ### About the data
-- **Geographic coverage:** Global
+- **Geographic coverage:** 53 countries
 - **Date of content:** 1990-2018
 - **Data type:** Tabular
 - **Spatial resolution:** National
