@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Ocean-related measures in NDCs](https://bit.ly/3mu2dnC) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A radial pie chart chart displaying whether sectoral adaptation and mitigation measures have been made by each country in sub-sectors related to ocean management. For the global widget, the radius of the pie peice represents the number of countries with measures in a given sub-sector fit to a log scale.
+A radial pie chart chart displaying whether sectoral adaptation and mitigation measures have been made by each country in sub-sectors related to ocean management. For the global widget, the radius of the pie peice represents the number of countries with measures in a given sub-sector.
 
 *Click the `i` button on the [widget](https://bit.ly/3mu2dnC) to read the full description.*
 
