@@ -22,7 +22,5 @@ The Organisation for Economic Co-operation and Development (OECD)
 ### Pre-processing
 The Ocean Watch data team used a [python script](com_038_rw0_shipping_emissions.py) to subset and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_038_rw0_shipping_emissions_edit). The source provided the data as a single CSV file, which contained country-/territory-level time series data for a variety of indicators related to transportation and emissions. We extracted a single indicator, `IND-ENE-MAR`, which describes the "share of CO2 emissions from international maritime bunkers in total CO2 emissions". The time series data for all countries was saved in a standalone CSV file, which was then uploaded to Carto.
 
-You can view the processed dataset for [display on Resource Watch](https://resourcewatch.org/data/explore/ac9c2f07-9f23-4a33-9958-e02c571ec009).
-
 ### Citation
 OECD (2020), [Sustainable Ocean Economy \[Data set]. Available from https://stats.oecd.org.
