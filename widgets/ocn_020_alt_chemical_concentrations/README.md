@@ -15,4 +15,4 @@ To create the widget, the Ocean Watch data team drew data directly from the [tab
 ## Supplemental Files 
 | File | Description |
 | --------------- | --------------- |
-|  [`river-mouth-water-quality.ipynb`]({local-link})  |    notebook describing the Vega specification to create the visualization| 
+|  [`river-mouth-water-quality.ipynb`](river-mouth-water-quality.ipynb)  |    notebook describing the Vega specification to create the visualization| 
