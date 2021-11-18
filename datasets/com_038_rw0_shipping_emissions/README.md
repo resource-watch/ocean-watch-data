@@ -14,10 +14,7 @@ The Organisation for Economic Co-operation and Development (OECD)
 - **Spatial resolution:** National
 - **Frequency of updates:** Not stated
 
-<br/>The OEECD took these data from the International Energy Agency's World Energy Balances and Statistics: CO<sub>2</sub> emissions from fuel combustion database.
-
-<br/>*Learn more about the data [here](https://www.iea.org/reports/greenhouse-gas-emissions-from-energy-overview)*
-
+<br/>The OECD provides these data sourced from the International Energy Agency's World Energy Balances and Statistics: CO<sub>2</sub> emissions from fuel combustion database.<br/>*Learn more about the data [here](https://www.iea.org/reports/greenhouse-gas-emissions-from-energy-overview)*
 
 ### Download the data
 [Sustainable Ocean Economy: International marine bunker CO<sub>2</sub> emissions as share of total CO<sub>2</sub> emissions from fuel combustion, %](http://stats.oecd.org/index.aspx?datasetcode=OCEAN) <br>
