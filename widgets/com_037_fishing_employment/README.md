@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Employment in fisheries and other natural sectors](https://bit.ly/3o6lVGU) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A stacked bar chart chart displaying employment in fishing compared to other natural sectors (agriculture, forestry, and hunting) by year for a given country. The data can be disaggregated by sex.
+A stacked bar chart chart displaying employment in fishing compared to other natural sectors (agriculture, forestry, and hunting) by year for a given country or territory. The data can be disaggregated by sex.
 
 *Click the `i` button on the [widget](https://bit.ly/3o6lVGU) (this example is data for Mexico) to read the full description.*
 
