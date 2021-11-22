@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Progress toward protecting 30% of the ocean widget](https://bit.ly/2Z25ORW) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-**Global:** A stacked area chart displaying the area in km<sup>2</sup> of the global marine environment that is protected over time. Areas are dissaggreated by national waters and areas beyond national jurisdiction. A dashed line reflects the emerging Post 2020 Biodiversity Framework target of protecting 30% of the ocean. <br>
+**Global:** A stacked area chart displaying the area in km<sup>2</sup> of the global marine environment that is protected over time. Areas are by marine area under national/territorial jurisdiction and areas beyond national jurisdiction. A dashed line reflects the emerging Post 2020 Biodiversity Framework target of protecting 30% of the ocean. <br>
 **Country or territory:** An area chart displaying the proportion of marine area that is protected by country or territory over time. The total marine area includes shared marine areas and any overseas territories.
 
 *Click the `i` button on the [widget](https://bit.ly/2Z25ORW) to read the full description.*

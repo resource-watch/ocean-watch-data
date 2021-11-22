@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Food secuirty and dependence on marine protein widget](https://bit.ly/3BWhuE9) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A dorling cartogram map. The size of a circle represents the average prevalence of moderate to severe food insecurity 2018-2020. The color gradient represents the proportion of protein supply from marine protein from 2018. Countries or territories without both data do not have a circle. When the widget is displayed at a country/territory-level, the borders of the country/territory and its associated circle are highlighted. 
+A bubble chart. The size of a circle represents the average prevalence of moderate to severe food insecurity 2018-2020. The color gradient represents the proportion of protein supply from marine protein from 2018. Countries or territories without both data do not have a circle. When the widget is displayed at a country/territory-level, the borders of the country/territory and its associated circle are highlighted. 
 
 *Click the `i` button on the [widget](https://bit.ly/3BWhuE9) to read the full description.*
 

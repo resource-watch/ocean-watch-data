@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Deforestation and crop expansion, 2015–2019](https://bit.ly/31YijiJ) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A bar chart displaying area of land that transitioned from forest to cropland and from cropland to forest by year in a given country or territory from 2015-2019. 
+A bar chart displaying the area of land that transitioned from forest to cropland and from cropland to forest by year in a given country or territory from 2015-2019. 
 
 *Click the `i` button on the [widget](https://bit.ly/31YijiJ) (this example is data for Mexico) to read the full description.*
 

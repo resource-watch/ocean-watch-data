@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Urbanization, 2015–2019 widget](https://bit.ly/3cjQFhW) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A bar chart displaying area of land that transitioned to urban area by year in a given country or territory from 2015-2019. 
+A bar chart displaying the area of land that transitioned to urban area by year in a given country or territory from 2015-2019. 
 
 *Click the `i` button on the [widget](https://bit.ly/3cjQFhW) (this example is data for Mexico) to read the full description.*
 

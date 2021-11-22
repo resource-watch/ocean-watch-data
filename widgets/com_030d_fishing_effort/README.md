@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Annual global fishing effort and fisheries production](https://bit.ly/2ZWnQWt) and the [Annual fishing effort and fisheries production in the country's marine area widget](https://bit.ly/31vPw50) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A line chart displaying (1) the hours spent fishing and (2) fishery capture production in tons, by year, in a country/territory. The widget is also available at a global level. Because of limitations in data access, the global widget only reflects time spent fishing within *national* waters. This widget will be updated to include international waters when the data becomes available. 
+A line chart displaying (1) time spent fishing within marine areas under national jurisdiction and (2) fishery capture production in tons, by year, in a country/territory. The widget is also available at a global level. Because of limitations in data access, the global widget only reflects time spent fishing within *national* waters. This widget will be updated to include international waters when the data becomes available. 
 
 
 *Click the `i` button on the [global widget](https://bit.ly/2ZWnQWt) and the [country/territory widget](https://bit.ly/31vPw50) to read the full description.*

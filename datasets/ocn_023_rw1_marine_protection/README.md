@@ -2,7 +2,7 @@
 This file describes the Marine Protected Areas dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Protected area coverage within the exclusive economic zones (extending 200 nautical miles from the coastline) of a given nation and its overseas territories.
+Protected area coverage within 200 nautical miles of country and territory coastlines (Exclusive Economic Zones). This value includes overseas territories and shares zones where present. 
 
 ### Source
 The Organisation for Economic Co-operation and Development (OECD)

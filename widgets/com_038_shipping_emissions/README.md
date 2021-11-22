@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Shipping emissions: Top emitting countries](https://bit.ly/3aQtAml) and the [Proportion of national CO<sub>2</sub> emissions from shipping](https://bit.ly/3BI7C01) widgets on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A line chart displaying the proportion of total CO<sub>2</sub> emissions attributable to maritime bunker fuel for a country or territory by year. At the global level, the widget shows the time series for the top 10  countries with the greatest proportion of emissions. 
+A line chart displaying the proportion of total CO<sub>2</sub> emissions attributable to maritime bunker fuel for a country or territory by year. At the global level, the widget shows the time series for the top 15 countries with the greatest proportion of emissions. 
 
 *Click the `i` button on the [global](https://bit.ly/3aQtAml) or the [country/territory](https://bit.ly/3BI7C01) widget to read the full description.*
 

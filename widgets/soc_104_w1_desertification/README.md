@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Desertification, 2015-2019 widget](https://bit.ly/2YHvi7k) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A stacked bar chart displaying area of land that transitioned from shrubland and grassland, forests, wetlands, and croplands to bare ground by year in a given country from 2015-2019. 
+A stacked bar chart displaying the area of land that transitioned from shrubland and grassland, forests, wetlands, and croplands to bare ground by year in a given country or territory from 2015-2019. 
 
 *Click the `i` button on the [widget](https://bit.ly/2YHvi7k) (this example is data for Mexico) to read the full description.*
 

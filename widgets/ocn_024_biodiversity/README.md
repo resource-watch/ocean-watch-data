@@ -2,7 +2,7 @@
 This file describes the data and processing behind the [Protection of biodiversity hotspots widget](https://bit.ly/2WOze58) on [Ocean Watch](https://oceanwatchdata.org)
 
 ## Style and Fuction
-A pie chart chart displaying the average proportion of Key Biodiversity Areas that are currently protected within the EEZ of a given country or territory. The widget is also available at a global level. 
+A pie chart chart displaying the average proportion of Key Biodiversity Areas that are currently protected within the that are currently protected within the marine area under national or territorial jurisdiction (exclusive economic zone). The widget is also available at a global level. 
 
 *Click the `i` button on the [widget](https://bit.ly/2WOze58) to read the full description.*
 

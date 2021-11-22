@@ -2,7 +2,7 @@
 This file describes the Surface Concentration of Nutrients at River Mouths dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Mean concentration at surface of nitrate, phosphate, and dissolved oxygen at points representing major river outlets into the ocean
+Mean surface concentration at surface of nitrate, phosphate, and dissolved oxygen at points representing major river outlets into the ocean
 
 ### Source
 Copernicus Marine Environment Monitoring Service (CMEMS)

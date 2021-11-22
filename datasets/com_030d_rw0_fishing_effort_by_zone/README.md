@@ -2,7 +2,7 @@
 This file describes the Fishing Effort by Zone dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-Time spent fishing within each Exclusive Economic Zone (or other zone) disaggregated by year, as detected using an Automatic Identification System (AIS)
+Time spent fishing within within 200 nautical miles of country and territory coastlines (Exclusive Economic Zones), or other zone, disaggregated by year. Vessels are detected using an Automatic Identification System (AIS). Machine learning models are used to classify vessels and predict when they are fishing.
 
 ### Source
 Global Fishing Watch 

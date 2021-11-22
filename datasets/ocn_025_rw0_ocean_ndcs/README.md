@@ -2,7 +2,7 @@
 This file describes the Ocean Nationally Determined Contributions (NDC) dataset on [Ocean Watch](https://www.oceanwatchdata.org)
 
 ### Function
-The data shows whether sectoral adaptation and mitigation measures have been made by each country in subsectors related to ocean management.
+The data shows whether sectoral adaptation and mitigation measures have been made by each country- in their nationally determined contribution-  in subsectors related to ocean management.
 
 ### Source
 Climate Watch
