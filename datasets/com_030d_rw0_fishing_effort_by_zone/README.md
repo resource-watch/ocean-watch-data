@@ -30,3 +30,6 @@ The Ocean Watch data team used a [python script](fishing-effort_collect-data.py)
 
 ### Citation
 D.A. Kroodsma, J. Mayorga, T. Hochberg, N.A. Miller, K. Boerder, F. Ferretti, A. Wilson, B. Bergman, T.D. White, B.A. Block, P. Woods, B. Sullivan, C. Costello, and B. Worm. "Tracking the global footprint of fisheries." Science 361.6378 (2018).
+
+### License 
+Global Fishing Watch data is licensed foruse through WRI for educational or other non-commercialpurposes subject toCC BY-NC 4.0. Reproduction ofthis data and API access for resale or other commercialpurposes is prohibited without prior written permission.
