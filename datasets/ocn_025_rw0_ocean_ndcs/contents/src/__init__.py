@@ -1,5 +1,5 @@
 from cartoframes.auth import set_default_credentials
-from cartoframes import read_carto, to_carto
+from cartoframes import read_carto, to_carto, update_privacy_table
 import pandas as pd
 import os
 import logging 
@@ -93,5 +93,8 @@ def main():
     df=df.drop(['index','id','country','source', 'global_category', 'overview_category'], axis = 1)
 
     logger.info('Upload dataframe to Carto')
+
+    table_name ='ocn_025_rw1_ocean_ndc_measures'
     # upload data frame to Carto
-    to_carto(df, 'ocn_025_rw0_ocean_ndc_measures_nrt_TEST', if_exists='replace')
+    to_carto(df, table_name, if_exists='replace')
+    update_privacy_table(table_name, 'link')
