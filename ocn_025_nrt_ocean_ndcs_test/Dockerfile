@@ -1,6 +1,5 @@
 FROM python:3.6
 MAINTAINER Rachel Thoms <rachel.thoms@wri.org>
-#Note this script was originally developed by Yujing Wu <yujing.wu@wri.org>
 
 # install core libraries
 RUN apt-get update
