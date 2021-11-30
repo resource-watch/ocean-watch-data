@@ -23,7 +23,6 @@ CARTO_USER = os.getenv('CARTO_WRI_RW_USER')
 CARTO_KEY = os.getenv('CARTO_WRI_RW_KEY')
 set_default_credentials(username=CARTO_USER, base_url="https://{user}.carto.com/".format(user=CARTO_USER),api_key=CARTO_KEY)
 
-
 # Get a list of ocean subsector indicator ids from Climate Watch. The ids are not fixed, and change each time the data is uploaded.
 
 # define the list of "slugs" that point to the ocean related subsectors on Climate Watch - these are fixed 
@@ -95,6 +94,9 @@ def main():
     logger.info('Upload dataframe to Carto')
 
     table_name ='ocn_025_rw1_ocean_ndc_measures'
+
     # upload data frame to Carto
     to_carto(df, table_name, if_exists='replace')
+
+    # update privacy settings
     update_privacy_table(table_name, 'link')
