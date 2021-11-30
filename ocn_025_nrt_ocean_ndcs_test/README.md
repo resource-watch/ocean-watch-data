@@ -1,1 +1,1 @@
-### TEST near real time repositroy using ocn_025
+### TEST near real time repo using ocn_025
