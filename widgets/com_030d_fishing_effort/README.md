@@ -10,6 +10,8 @@ A line chart displaying (1) time spent fishing within marine areas under nationa
 ## Data Source
 Data displayed in this widget comes from the [Fishing Effort by Zone](../../datasets/com_030d_rw0_fishing_effort_by_zone/README.md) dataset on Ocean Watch and the [Fishery Production](https://resourcewatch.org/data/explore/foo062-Fishery-Production) dataset on Resource Watch.
 
+<br/> __License:__ Global Fishing Watch data is licensed foruse through WRI for educational or other non-commercialpurposes subject toCC BY-NC 4.0. Reproduction ofthis data and API access for resale or other commercialpurposes is prohibited without prior written permission.
+
 ### Caution
 Global Fishing Watch (GFW) employs a sophisticated machine learning algorithm to identify where vessels are fishing, the gear they're using, and how long fishing takes place, among other variables. Global Fishing Watch’s fishing detection algorithm is a best effort mathematically to identify “apparent fishing activity.” As a result, it is possible that some fishing activity is not identified as such by Global Fishing Watch; conversely, Global Fishing Watch may show apparent fishing activity where fishing is not actually taking place. For these reasons, Global Fishing Watch qualifies designations of vessel fishing activity, including synonyms of the term “fishing activity,” such as “fishing” or “fishing effort,” as “apparent,” rather than certain. Any/all Global Fishing Watch information about “apparent fishing activity” should be considered an estimate and must be relied upon solely at your own risk. Global Fishing Watch is taking steps to make sure fishing activity designations are as accurate as possible.
 
