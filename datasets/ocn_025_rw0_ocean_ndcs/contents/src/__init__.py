@@ -16,6 +16,7 @@ console = logging.StreamHandler()
 logger.addHandler(console)
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
+logging.info('STARTING')
 
 
 # set credientials for carto frames
@@ -100,3 +101,5 @@ def main():
 
     # update privacy settings
     update_privacy_table(table_name, 'link')
+
+    logging.info('SUCCESS')

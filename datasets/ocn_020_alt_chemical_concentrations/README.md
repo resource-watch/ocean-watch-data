@@ -24,3 +24,5 @@ The Ocean Watch data team used an extensive series of scripts and manual process
 
 ### Citation
 Global Ocean Biogeochemistry Analysis and Forecast (2021), E.U. Copernicus Marine Service Information [Dataset]. Accessed through Resource Watch, (date). www.resourcewatch.org.
+
+##### Note: the Ocean Watch data team is in the process of updating the pre-processing workflow so this dataset can update monthly. The near real time processing script and associated files are also contained with-in this folder
