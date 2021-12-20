@@ -9,6 +9,7 @@ import requests
 import xml.etree.ElementTree as ET
 import math
 import concurrent.futures
+import re
 
 import pandas as pd
 
@@ -62,7 +63,7 @@ def build_wms_request(x, y, variable, depth):
     # make request the 16th of month before last..
     now = datetime.utcnow()
     dt = now.replace(day=16)
-    months_ago = 2
+    months_ago = 0
     dt = dt - dateutil.relativedelta.relativedelta(months=months_ago)
     date = dt.strftime('%Y-%m-%d')
     if (dt.month % 2 ) == 0:
@@ -149,7 +150,7 @@ def pull_data(row, variable, depth):
     resp = requests.get(req)
     df_resp = parse_response(resp)
     if df_resp is None:
-        raise ValueError('Invalid response to supposedly valid location: HYRIV_ID='+hyriv_id)
+            raise ValueError('Invalid response to supposedly valid location: HYRIV_ID='+hyriv_id)
     df_resp['hyriv_id'] = hyriv_id
     df_resp['pfaf_id_12'] = row['pfaf_id_12']
     df_resp['hybas_id_5'] = row['hybas_id_5']
@@ -159,59 +160,106 @@ def pull_data(row, variable, depth):
     df_resp['depth'] = depth
     df_resp['osm_name'] = row['osm_name']
     cols_reorder = ['longitude','latitude','gridCentreLon','gridCentreLat','dt','variable','depth','value',
-            'hyriv_id','pfaf_id_12','hybas_id_5','hybas_id_3','ord_flow','osm_name']
+                'hyriv_id','pfaf_id_12','hybas_id_5','hybas_id_3','ord_flow','osm_name']
     df_resp = df_resp[cols_reorder]
     return df_resp
 
 logger.debug('Pull river mouth data from Carto')
 gdf_mouths = read_carto("ocn_calcs_010_target_river_mouths")
 
+
+
 results = []
 logger.info('Initiate multithreading for WMS requests')
-# request all records for all permutations, combine into single dataframe
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    args_list = []
-    args_pending = []
-    logger.info('Build request arguments')
-    for index, row in gdf_mouths.iterrows():
-        # # manual control over looping for interrupted runs
-        # if index < 0:
-        #     continue
-        # if index > 100:
-        #     break
-        if row['x_valid'] is None or row['y_valid'] is None:
-            continue
-        for variable in variables:
-            for depth in depths:
-                args_list.append([index, row, variable, depth])
-                # if index == 0:
-                #     print([index, variable, depth])
-    args_pending = args_list.copy()
-    logger.info('Begin request submission loop')
-    while(args_pending): # if list not empty
-        args_try = args_pending.copy()
-        args_pending = []
-        logger.debug('Create Futures for outstanding requests ('+str(len(args_try))+')')
-        future_to_args = {executor.submit(pull_data, args[1], args[2], args[3]): args for args in args_try}
-        for future in concurrent.futures.as_completed(future_to_args):
-            args = future_to_args[future]
-            try:
-                results.append(future.result())
-                # print('completed', args)
-                if args[0] % 100 == 0 and args[2]==variables[-1] and args[3]==depths[-1]:
-                    print('successful request for idx#'+str(args[0])+' at '+str(datetime.now()))
-            except ConnectionError as e:
-                print(e)
-                args_pending.append(args)
-            except Exception as e:
-                print(e)
-                args_pending.append(args)
-        logger.debug('Futures completed')
-logger.info('Construct DataFrame from full set of responses')
-df_all = pd.concat([result for result in results if result is not None],
-        axis=0, ignore_index=True)
-df_all.sort_values(['hyriv_id','variable','depth','dt'],
-        axis=0, ascending=True, inplace=True, ignore_index=True)
 
-logger.info('Persist DataFrame to Carto')
-to_carto(df_all, dataset_name, if_exists='append')
+def check_update():
+    most_recent_dt_table = read_carto("SELECT MAX(dt) FROM ocn_020alt_chemical_concentrations")
+    most_recent_dt = most_recent_dt_table['max'][0].strftime('%Y-%m-%d')
+    now = datetime.utcnow()
+    dt = now.replace(day=16)
+    next_dt = dt.strftime('%Y-%m-%d')
+    if next_dt > most_recent_dt:
+        return True
+    else:
+        return False
+
+def check_data():
+    x = 31.01
+    y = 31.74
+    variable = "o2"
+    depth = 0.49402499198913574
+    req = build_wms_request(x, y, variable, depth)
+    resp = requests.get(req)
+    df_resp = parse_response(resp)
+    if df_resp is None:
+        code_string = re.findall("ServiceException code[\S\s]+",resp.text)
+        if code_string:
+            code = re.findall('\"\w+\"',code_string[0])
+            if code[0] == '"InvalidDimensionValue"':
+                if re.search("TIME", code_string[0]):
+                    raise ValueError('Invalid date. Data for this date is not available')
+                    return False
+            else: 
+                raise ValueError('Exception: ' + code_string[0])
+                return False
+    else: 
+        return True
+
+def get_data():
+    # request all records for all permutations, combine into single dataframe
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        args_list = []
+        args_pending = []
+        logger.info('Build request arguments')
+        for index, row in gdf_mouths.iterrows():
+            # # manual control over looping for interrupted runs
+            # if index < 0:
+            #     continue
+            # if index > 100:
+            #     break
+            if row['x_valid'] is None or row['y_valid'] is None:
+                continue
+            for variable in variables:
+                for depth in depths:
+                    args_list.append([index, row, variable, depth])
+                    # if index == 0:
+                    #     print([index, variable, depth])
+        args_pending = args_list.copy()
+        logger.info('Begin request submission loop')
+        while(args_pending): # if list not empty
+            args_try = args_pending.copy()
+            args_pending = []
+            logger.debug('Create Futures for outstanding requests ('+str(len(args_try))+')')
+            future_to_args = {executor.submit(pull_data, args[1], args[2], args[3]): args for args in args_try}
+            for future in concurrent.futures.as_completed(future_to_args):
+                args = future_to_args[future]
+                try:
+                    results.append(future.result())
+                    # print('completed', args)
+                    if args[0] % 100 == 0 and args[2]==variables[-1] and args[3]==depths[-1]:
+                        print('successful request for idx#'+str(args[0])+' at '+str(datetime.now()))
+                except ConnectionError as e:
+                    print(e)
+                    args_pending.append(args)
+                except Exception as e:
+                    print(e)
+                    args_pending.append(args)
+            logger.debug('Futures completed')
+    logger.info('Construct DataFrame from full set of responses')
+    df_all = pd.concat([result for result in results if result is not None],
+            axis=0, ignore_index=True)
+    df_all.sort_values(['hyriv_id','variable','depth','dt'],
+            axis=0, ascending=True, inplace=True, ignore_index=True)
+    return df_all
+    
+
+
+def main():
+    if check_update():
+        if check_data():
+            df_all = get_data()
+            logger.info('Persist DataFrame to Carto')
+            to_carto(df_all, dataset_name, if_exists='append')
+    else:
+        logger.info('Data already up to date')
+    logging.info('SUCCESS') 
