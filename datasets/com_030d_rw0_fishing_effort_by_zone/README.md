@@ -9,7 +9,7 @@ Global Fishing Watch
 
 ### About the data
 - **Geographic coverage:** Global
-- **Date of content:** 2012-2020
+- **Date of content:** 2012-2021
 - **Data type:** Tabular
 - **Spatial resolution:** National
 - **Frequency of updates:** Yearly
@@ -26,10 +26,12 @@ Global Fishing Watch (GFW) employs a sophisticated machine learning algorithm to
 
 
 ### Pre-processing
-The Ocean Watch data team used a [python script](fishing-effort_collect-data.py) to request data and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_030d_fishing_effort_by_zone). Data were requested through the Global Fishing Watch API. The API is still under construction and not available for use by the general public. Data was requested using polygons for Exclusive Economic Zones (`200NM`, 200 nautical miles from coastalin), overlapping claim areas, and joint regime areas from the [Maritime Boundaries dataset](https://resourcewatch.org/data/explore/com011rw1-Maritime-Boundaries) on Resource Watch. We checked for requests that failed and re-requested data using [an additional python script](fishing-effort_collect-data.py). This script can also be run to request data for new years.
+The Ocean Watch data team used a [python script](fishing-effort_collect-data.py) to request data and upload the selected data to [a table on Carto](https://resourcewatch.carto.com/u/wri-rw/dataset/com_030d_fishing_effort_by_zone). Data were requested through the Global Fishing Watch API. The API is still under construction and not available for use by the general public. Data was requested using polygons for Exclusive Economic Zones (`200NM`, 200 nautical miles from coastline), overlapping claim areas, and joint regime areas from the [Maritime Boundaries dataset](https://resourcewatch.org/data/explore/com011rw1-Maritime-Boundaries) on Resource Watch. We checked for requests that failed and re-requested data using [an additional python script](fishing-effort_collect-data.py). 
+
+*Note:* Since the creation of this dataset, GFW has made changes to their API. The dataset is updated yearly using a [new python script](fishing-effort_update-data.py).
 
 ### Citation
 D.A. Kroodsma, J. Mayorga, T. Hochberg, N.A. Miller, K. Boerder, F. Ferretti, A. Wilson, B. Bergman, T.D. White, B.A. Block, P. Woods, B. Sullivan, C. Costello, and B. Worm. "Tracking the global footprint of fisheries." Science 361.6378 (2018).
 
 ### License 
-Global Fishing Watch data is licensed foruse through WRI for educational or other non-commercialpurposes subject toCC BY-NC 4.0. Reproduction ofthis data and API access for resale or other commercialpurposes is prohibited without prior written permission.
+Global Fishing Watch data is licensed foruse through WRI for educational or other non-commercial purposes subject to CC BY-NC 4.0. Reproduction ofthis data and API access for resale or other commercialpurposes is prohibited without prior written permission.
