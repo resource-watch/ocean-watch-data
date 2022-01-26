@@ -13,16 +13,13 @@ RUN pip install python-rapidjson
 RUN pip install cartoframes
 RUN pip install geopandas
 RUN pip install datetime
-RUN pip install dateutil
-RUN pip install xml
-RUN pip install math
-RUN pip install concurrent
-RUN pip installt os
-RUN pip install sys
-
+RUN pip install python-dateutil
+RUN pip install xml_python
+RUN pip install python-math
+RUN pip install concurrent-utils
 
 # set name
-ARG NAME=ocn_020_chem_conc
+ARG NAME=ocn_020d
 ENV NAME ${NAME}
 
 # copy the application folder inside the container
