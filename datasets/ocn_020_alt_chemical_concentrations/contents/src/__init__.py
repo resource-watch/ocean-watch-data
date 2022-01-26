@@ -189,7 +189,7 @@ def check_data():
     x = 31.01
     y = 31.74
     variable = "o2"
-    depth = 0.49402499198913574
+    depth = -0.49402499198913574
     req = build_wms_request(x, y, variable, depth)
     resp = requests.get(req)
     df_resp = parse_response(resp)
