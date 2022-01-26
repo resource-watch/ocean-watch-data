@@ -63,7 +63,7 @@ def build_wms_request(x, y, variable, depth):
     # make request the 16th of month before last..
     now = datetime.utcnow()
     dt = now.replace(day=16)
-    months_ago = 0
+    months_ago = 1
     dt = dt - dateutil.relativedelta.relativedelta(months=months_ago)
     date = dt.strftime('%Y-%m-%d')
     if (dt.month % 2 ) == 0:
@@ -173,12 +173,14 @@ results = []
 logger.info('Initiate multithreading for WMS requests')
 
 def check_update():
-    most_recent_dt_table = read_carto("SELECT MAX(dt) FROM ocn_020alt_chemical_concentrations")
-    most_recent_dt = most_recent_dt_table['max'][0].strftime('%Y-%m-%d')
+    date_table = read_carto("SELECT DISTINCT(dt) as date FROM ocn_020alt_chemical_concentrations")
+    dates = [date.strftime('%Y-%m-%d') for date in date_table['date']]
     now = datetime.utcnow()
-    dt = now.replace(day=16)
-    next_dt = dt.strftime('%Y-%m-%d')
-    if next_dt > most_recent_dt:
+    date = now.replace(day=16)
+    months_ago = 1
+    request_date = date - dateutil.relativedelta.relativedelta(months=months_ago)
+    request_date = request_date.strftime('%Y-%m-%d')
+    if request_date not in dates:
         return True
     else:
         return False

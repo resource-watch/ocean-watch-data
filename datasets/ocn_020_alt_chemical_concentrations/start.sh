@@ -1,5 +1,5 @@
 #Change the NAME variable with the name of your script
-NAME=ocn_020_chem_conc
+NAME=ocn_020d
 LOG=${LOG:-udp://localhost}
 
 docker build -t $NAME --no-cache --build-arg NAME=$NAME .
