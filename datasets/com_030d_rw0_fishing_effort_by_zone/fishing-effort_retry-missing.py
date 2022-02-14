@@ -73,7 +73,7 @@ logger.debug('Generate list of missing entries (zone-year pairs)')
 entries_table = dataset_name
 query_missing = (
     "SELECT zone.mrgid, zone.geoname, zone.pol_type, zone.year, effort.value FROM ( "
-    "    SELECT zone.mrgid, zone.geoname, zone.pol_type, UNNEST(ARRAY[2012,2013,2014,2015,2016,2017,2018,2019,2020]) AS year "
+    "    SELECT zone.mrgid, zone.geoname, zone.pol_type, UNNEST(ARRAY[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021]) AS year "
     "    FROM com_011_rw1_maritime_boundaries_edit zone "
     "    WHERE zone.pol_type IN ('200NM','Overlapping claim','Joint regime')) AS zone "
     "LEFT OUTER JOIN com_030d_fishing_effort_by_zone effort ON (zone.mrgid = effort.mrgid AND zone.year = effort.year) "
