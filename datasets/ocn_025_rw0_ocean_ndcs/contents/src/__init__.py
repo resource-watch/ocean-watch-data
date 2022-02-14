@@ -1,3 +1,8 @@
+## WARNING: Currently the ClimateWatch API is unreliable. When the ClimateWatch data is updated weekly, many of the indicators change names and the script
+## cannot retrieve the associated data from their API. The Ocean Watch data team has decided to not convert this dataset to a near real time dataset until 
+## ClimateWatch has resolved this issue. Contacts @ ClimateWatch - Mengpin Ge (mengpin.ge@wri.org) Johannes Friedrich (johannes.friedrich@wri.org).
+## When the API issues are resolved, this script can be used. Note that the time.cron file and the table name in the __init__.py script will need to be updated 
+
 from cartoframes.auth import set_default_credentials
 from cartoframes import read_carto, to_carto, update_privacy_table
 import pandas as pd
