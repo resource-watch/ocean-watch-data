@@ -27,4 +27,4 @@ The Ocean Watch data team used a [python script](ocn_025_rw0_ocean_ndcs/ocn_025_
 Climate Watch NDC Content. 2021. Washington, DC: World Resources Institute. Available online at: https://www.climatewatchdata.org
 
 
-##### Note: the Ocean Watch data team is in the process of updating the pre-processing workflow so this dataset can update monthly. The near real time processing script and associated files are also contained with-in this folder
+##### Note: the Ocean Watch data team was in the process of updating the pre-processing workflow so this dataset can update monthly. The team has put this update on hold due to inconsistencies with the ClimateWatch API to resolve. The near real time processing script and associated files are contained with-in this folder.
