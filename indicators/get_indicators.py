@@ -7,6 +7,10 @@ import json
 import requests
 import re
 
+'''
+CAUTION: This script uses the Ocean Watch json configuration as of 2/15/2022. Any changes to the structure of this file 
+may affect this script. In the case of unexpected results, please review the change history of the json file.
+'''
 # The content on the OceanWatch pages are configured using a json file managed by Vizzuality
 ow_json_url = "https://raw.githubusercontent.com/resource-watch/resource-watch/develop/public/static/data/ocean-watch.json"
 
