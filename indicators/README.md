@@ -1,5 +1,5 @@
 # Ocean Watch Indicators
-[Ocean Watch](https://oceanwatchdata.org) provides indicators at the global and country level. These include high level indicators featured in the top pane on the introduction page and country profiles, as well as the ranks and indicator values in the "Value of Coastal Ecosystems" section.
+[Ocean Watch](https://oceanwatchdata.org) provides indicators at the global and country level. These include high level indicators featured in the header on the introduction page and country profiles, as well as the ranks and indicator values in the "Value of Coastal Ecosystems" section.
 
 ## Catalog of Indicators
 The Ocean Watch Data Team can find a catalog of all indicator values from Ocean Watch on Sharepoint
@@ -109,5 +109,5 @@ WHERE timeperiod = 2021 AND gadm.geostore_prod ILIKE '9bc50cce7f5b6ebd0452a3b839
 ```
 Follow the directions above to (4) __test the SQL statement__, (5) __test the query__, and (6) __update the Ocean Watch json__. 
 
-## Generate list of indicators 
+## Generating list indicators 
 To create an up-to-date list of all the indicators on Ocean Watch, their queries, and other values use the [`get_indicators` script](get_indicators.py). 
