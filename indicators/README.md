@@ -1,5 +1,5 @@
 # Ocean Watch Indicators
-[Ocean Watch](https://oceanwatchdata.org) provides indicators at the global and country level. These include high level indicators featured in the top pane on the introduction page and country profiles, as well as the ranks and indicator values in the "Value of Coastal Ecosystems" section.
+[Ocean Watch](https://oceanwatchdata.org) provides indicators at the global and country level. These include high level indicators featured in the header on the introduction page and country profiles, as well as the ranks and indicator values in the "Value of Coastal Ecosystems" section.
 
 ## List of Indicators
 The Ocean Watch Data Team can find a list of all indicator values from Ocean Watch on Sharepoint
