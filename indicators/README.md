@@ -1,8 +1,8 @@
 # Ocean Watch Indicators
 [Ocean Watch](https://oceanwatchdata.org) provides indicators at the global and country level. These include high level indicators featured in the header on the introduction page and country profiles, as well as the ranks and indicator values in the "Value of Coastal Ecosystems" section.
 
-## List of Indicators
-The Ocean Watch Data Team can find a list of all indicator values from Ocean Watch on Sharepoint
+## Catalog of Indicators
+The Ocean Watch Data Team can find a catalog of all indicator values from Ocean Watch on Sharepoint
 [`Sustainable Ocean Initiative\Documents\Ocean Watch\Development\Data\Indicator Tracking`](https://onewri.sharepoint.com/sites/WRI_ocean/Shared%20Documents/Ocean%20Watch/Development/Data/Indicator%20Tracking%20Sheet.xlsx)
 
 ## About Indicators
@@ -92,7 +92,7 @@ In the `staging` component of the file, navigate to the section for the appropri
 
 If the changes pass your inspection, you can make the same edits to the json in the `production` section and submit a pull request. 
 
-## Indicator Updates
+## Update indicators
 When the dataset underlying an indicator is updated, it is possible that the indicator will need to be updated as well.
 <b/r>__Workflow example: Ocean Biodiversity__
 1. Update underlying dataset, `ocn_024`. See the [dataset update workflow](../datasets/README.md) for more information.

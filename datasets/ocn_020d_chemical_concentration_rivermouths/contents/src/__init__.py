@@ -28,15 +28,19 @@ console = logging.StreamHandler()
 logger.addHandler(console)
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
+# suppres log messages from requests library unless they are at least warnings
+logging.getLogger("requests").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+
 logging.info('STARTING')
 
 # name of table on Carto where you want to upload data
 # this should be a table name that is not currently in use
-dataset_name = 'ocn_020alt_chemical_concentrations'
+dataset_name = 'ocn_020d_chemical_concentration_rivermouths'
 
 logger.debug('Authenticate Carto credentials')
-CARTO_USER = os.getenv('CARTO_WRI_RW_USER')
-CARTO_KEY = os.getenv('CARTO_WRI_RW_KEY')
+CARTO_USER = os.getenv('CARTO_USER')
+CARTO_KEY = os.getenv('CARTO_KEY')
 set_default_credentials(username=CARTO_USER,
                         base_url="https://{user}.carto.com/".format(user=CARTO_USER),
                         api_key=CARTO_KEY)
@@ -251,7 +255,7 @@ def get_data():
     df_all = pd.concat([result for result in results if result is not None],
             axis=0, ignore_index=True)
     df_all.sort_values(['hyriv_id','variable','depth','dt'],
-            axis=0, ascending=True, inplace=True, ignore_index=True)
+            axis=0, ascending=True, inplace=True)
     return df_all
     
 

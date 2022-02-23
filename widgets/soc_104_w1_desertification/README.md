@@ -7,10 +7,10 @@ A stacked bar chart displaying the area of land that transitioned from shrubland
 *Click the `i` button on the [widget](https://bit.ly/2YHvi7k) (this example is data for Mexico) to read the full description.*
 
 ## Data Source
-Data displayed in this widget comes from the [Land Cover Change](../../datasets/ocn_calcs_016_land_cover_change/README.md) dataset on Ocean Watch.
+Data displayed in this widget comes from the [Land Cover Change](../../datasets/soc_104b_land_cover_change/README.md) dataset on Ocean Watch.
 
 ## Processing
-To create the widget, the Ocean Watch data team drew directly from the [table](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_calcs_016_land_cover_change_by_territory) for the Land Cover Change dataset stored on Carto. Within the widget configuration, the data was subsetted to the following tranisitions: 'Cropland to bare', 'Forest to bare', 'Wetland to bare', 'Vegetation to bare'.
+To create the widget, the Ocean Watch data team drew directly from the [table](https://resourcewatch.carto.com/u/wri-rw/dataset/soc_104b_land_cover_change) for the Land Cover Change dataset stored on Carto. Within the widget configuration, the data was subsetted to the following tranisitions: 'Cropland to bare', 'Forest to bare', 'Wetland to bare', 'Vegetation to bare'.
 
 ## Supplemental Files 
 | File | Description |

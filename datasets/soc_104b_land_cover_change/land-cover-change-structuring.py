@@ -82,7 +82,7 @@ mask = df_complete['variable']=='anyUrban'
 df_complete.loc[mask, 'widget'] = 'land cover change: urbanization'
 
 # export final output
-dataset_name = 'soc_104_alt_land_cover_change_by_territory'
+dataset_name = 'soc_104b_land_cover_change'
 path_output = os.path.join(data_folder, dataset_name+'.csv')
 df_complete.to_csv(path_output,index=False)
 
