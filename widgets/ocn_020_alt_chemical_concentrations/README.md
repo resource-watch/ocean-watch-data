@@ -4,13 +4,13 @@ This file describes the data and processing behind the [Dissolved oxygen concent
 ## Style and Fuction
 Three line charts displaying the mean surface concentration of  of nitrate, phosphate, and dissolved oxygen at major rivers outlets into the ocean, over time.
 
-*Click the `i` button on the widgets for [oxygen](https://bit.ly/3oBM2pu), [nitrate](https://bit.ly/3HuKAxO), and [phosphate](https://bit.ly/329fxHC) to read the full description.*
+*Click the `i` button on the widgets for [oxygen](), [nitrate](), and [phosphate]() to read the full description.*
 
 ## Data Source
-Data displayed in this widget comes from the [Surface Concentration of Nutrients at River Mouths Dataset](../../datasets/ocn_020_alt_chemical_concentrations/README.md) dataset on Ocean Watch.
+Data displayed in this widget comes from the [Surface Concentration of Nutrients at River Mouths Dataset](../../datasets/ocn_020d_chemical_concentration_rivermouths) dataset on Ocean Watch.
 
 ## Processing
-To create the widget, the Ocean Watch data team drew data directly from the [table](https://resourcewatch.carto.com/u/wri-rw/dataset/ocn_020alt_chemical_concentrations) for the dataset stored on Carto.
+To create the widget, the Ocean Watch data team drew data directly from the [table](https://resourcewatch.carto.com/u/rw-nrt/dataset/ocn_020d_chemical_concentration_rivermouths) for the dataset stored on Carto.
 
 ## Supplemental Files 
 | File | Description |
