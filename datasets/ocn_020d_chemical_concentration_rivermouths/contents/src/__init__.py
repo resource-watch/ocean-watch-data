@@ -34,6 +34,19 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 logging.info('STARTING')
 
+# load in the river basin geostore table and river mouth data
+logger.debug('Authenticate Carto credentials')
+CARTO_USER = os.getenv('CARTO_WRI_RW_USER')
+CARTO_KEY = os.getenv('CARTO_WRI_RW_KEY')
+set_default_credentials(username=CARTO_USER,
+                        base_url="https://{user}.carto.com/".format(user=CARTO_USER),
+                        api_key=CARTO_KEY)
+
+logger.debug('Pull river mouth data from Carto')
+gdf_mouths = read_carto("ocn_calcs_010_target_river_mouths")
+gdf_basins= read_carto("SELECT hybas_id AS hybas_id_5, geostore_prod FROM wat_068_rw0_watersheds_edit WHERE level = 5 AND coast = 1")
+
+
 # name of table on Carto where you want to upload data
 # this should be a table name that is not currently in use
 dataset_name = 'ocn_020d_chemical_concentration_rivermouths'
@@ -168,8 +181,7 @@ def pull_data(row, variable, depth):
     df_resp = df_resp[cols_reorder]
     return df_resp
 
-logger.debug('Pull river mouth data from Carto')
-gdf_mouths = read_carto("ocn_calcs_010_target_river_mouths")
+
 
 
 
@@ -256,16 +268,17 @@ def get_data():
             axis=0, ignore_index=True)
     df_all.sort_values(['hyriv_id','variable','depth','dt'],
             axis=0, ascending=True, inplace=True)
-    return df_all
-    
+    df_merge = pd.merge(df_all,gdf_basins, on='hybas_id_5', how='left')
 
+    return df_merge
+    
 
 def main():
     if check_update():
         if check_data():
-            df_all = get_data()
+            df_merge = get_data()
             logger.info('Persist DataFrame to Carto')
-            to_carto(df_all, dataset_name, if_exists='append')
+            to_carto(df_merge, dataset_name, if_exists='append')
     else:
         logger.info('Data already up to date')
     logging.info('SUCCESS') 

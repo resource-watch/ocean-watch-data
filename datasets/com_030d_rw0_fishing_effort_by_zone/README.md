@@ -19,8 +19,6 @@ Global Fishing Watch (GFW) employs a sophisticated machine learning algorithm to
 
 <br/>*Learn more about the data [here](https://globalfishingwatch.org/dataset-and-code-fishing-effort/)* 
 
-<br/>
-
 ### Download the data
 [Fishing effort](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
 
