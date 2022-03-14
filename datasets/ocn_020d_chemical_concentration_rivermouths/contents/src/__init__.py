@@ -43,7 +43,7 @@ set_default_credentials(username=CARTO_USER,
                         api_key=CARTO_KEY)
 
 logger.debug('Pull river mouth data from Carto')
-gdf_mouths = read_carto("ocn_calcs_010_target_river_mouths")
+gdf_mouths = read_carto("SELECT * FROM ocn_calcs_010_target_river_mouths")
 gdf_basins= read_carto("SELECT hybas_id AS hybas_id_5, geostore_prod FROM wat_068_rw0_watersheds_edit WHERE level = 5 AND coast = 1")
 
 
@@ -57,6 +57,9 @@ CARTO_KEY = os.getenv('CARTO_KEY')
 set_default_credentials(username=CARTO_USER,
                         base_url="https://{user}.carto.com/".format(user=CARTO_USER),
                         api_key=CARTO_KEY)
+
+max_carto_id = read_carto("SELECT MAX(cartodb_id) as max FROM ocn_020d_chemical_concentration_rivermouths")
+max = max_carto_id['max'][0] + 1
 # prepare request parameters
 variables = [
     'o2',
@@ -72,7 +75,7 @@ depths = [
 ]
 
 # define function for creating request
-def build_wms_request(x, y, variable, depth):
+def build_wms_request(x, y, variable, depth, hr):
     xmin = x-0.0
     ymin = y-0.0
     xmax = x+0.0000001
@@ -83,10 +86,6 @@ def build_wms_request(x, y, variable, depth):
     months_ago = 1
     dt = dt - dateutil.relativedelta.relativedelta(months=months_ago)
     date = dt.strftime('%Y-%m-%d')
-    if (dt.month % 2 ) == 0:
-        hr = 12
-    else:
-        hr = 00
     req_template = (
         'https://nrt.cmems-du.eu/thredds/wms/global-analysis-forecast-bio-001-028-monthly?'
         'SERVICE=WMS'
@@ -156,14 +155,14 @@ def parse_response(response):
     df_resp['value'] = response_data_values
     return df_resp
 
-def pull_data(row, variable, depth):
+def pull_data(row, variable, depth, hr):
     if row['x_valid'] is None or row['y_valid'] is None:
         # corrected coordinates have not been set
         # print('No valid coordinates for processed river mouth: HYRIV_ID='+hyriv_id)
         return None
     hyriv_id = row['hyriv_id']
     x, y = float(row['x_valid']), float(row['y_valid'])
-    req = build_wms_request(x, y, variable, depth)
+    req = build_wms_request(x, y, variable, depth, hr)
     resp = requests.get(req)
     df_resp = parse_response(resp)
     if df_resp is None:
@@ -182,14 +181,11 @@ def pull_data(row, variable, depth):
     return df_resp
 
 
-
-
-
 results = []
 logger.info('Initiate multithreading for WMS requests')
 
 def check_update():
-    date_table = read_carto("SELECT DISTINCT(dt) as date FROM ocn_020alt_chemical_concentrations")
+    date_table = read_carto("SELECT DISTINCT(dt) as date FROM ocn_020d_chemical_concentration_rivermouths")
     dates = [date.strftime('%Y-%m-%d') for date in date_table['date']]
     now = datetime.utcnow()
     date = now.replace(day=16)
@@ -206,24 +202,32 @@ def check_data():
     y = 31.74
     variable = "o2"
     depth = -0.49402499198913574
-    req = build_wms_request(x, y, variable, depth)
+    hr = 0
+    req = build_wms_request(x, y, variable, depth, hr)
     resp = requests.get(req)
     df_resp = parse_response(resp)
     if df_resp is None:
-        code_string = re.findall("ServiceException code[\S\s]+",resp.text)
-        if code_string:
-            code = re.findall('\"\w+\"',code_string[0])
-            if code[0] == '"InvalidDimensionValue"':
-                if re.search("TIME", code_string[0]):
-                    raise ValueError('Invalid date. Data for this date is not available')
+        hr = 12
+        req = build_wms_request(x, y, variable, depth, hr)
+        resp = requests.get(req)
+        df_resp = parse_response(resp)
+        if df_resp is None:
+            code_string = re.findall("ServiceException code[\S\s]+",resp.text)
+            if code_string:
+                code = re.findall('\"\w+\"',code_string[0])
+                if code[0] == '"InvalidDimensionValue"':
+                    if re.search("TIME", code_string[0]):
+                        raise ValueError('Invalid date. Data for this date is not available')
+                        return False
+                else: 
+                    raise ValueError('Exception: ' + code_string[0])
                     return False
-            else: 
-                raise ValueError('Exception: ' + code_string[0])
-                return False
+        else: 
+            return 12
     else: 
-        return True
+        return 0
 
-def get_data():
+def get_data(hr):
     # request all records for all permutations, combine into single dataframe
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         args_list = []
@@ -239,7 +243,7 @@ def get_data():
                 continue
             for variable in variables:
                 for depth in depths:
-                    args_list.append([index, row, variable, depth])
+                    args_list.append([index, row, variable, depth,hr])
                     # if index == 0:
                     #     print([index, variable, depth])
         args_pending = args_list.copy()
@@ -248,7 +252,7 @@ def get_data():
             args_try = args_pending.copy()
             args_pending = []
             logger.debug('Create Futures for outstanding requests ('+str(len(args_try))+')')
-            future_to_args = {executor.submit(pull_data, args[1], args[2], args[3]): args for args in args_try}
+            future_to_args = {executor.submit(pull_data, args[1], args[2], args[3], args[4]): args for args in args_try}
             for future in concurrent.futures.as_completed(future_to_args):
                 args = future_to_args[future]
                 try:
@@ -268,16 +272,24 @@ def get_data():
             axis=0, ignore_index=True)
     df_all.sort_values(['hyriv_id','variable','depth','dt'],
             axis=0, ascending=True, inplace=True)
+    df_all["hybas_id_5"] = df_all["hybas_id_5"].astype(str)
+    gdf_basins["hybas_id_5"] = gdf_basins["hybas_id_5"].astype(str)
     df_merge = pd.merge(df_all,gdf_basins, on='hybas_id_5', how='left')
+    df_merge.reset_index(inplace=True)
+    df_merge.columns = [x.lower() for x in df_merge.columns]
+    df_merge['index'] = df_merge.index+ max
+    df_merge.rename(columns = {'index':'cartodb_id'}, inplace = True)
 
     return df_merge
     
 
 def main():
     if check_update():
-        if check_data():
-            df_merge = get_data()
+        hr = check_data()
+        if hr != False:
+            df_merge = get_data(hr)
             logger.info('Persist DataFrame to Carto')
+            logger.debug('Authenticate Carto credentials')
             to_carto(df_merge, dataset_name, if_exists='append')
     else:
         logger.info('Data already up to date')
