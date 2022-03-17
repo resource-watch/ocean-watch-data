@@ -22,7 +22,7 @@ from cartoframes.auth import set_default_credentials
 from cartoframes import read_carto, to_carto
 
 # paths to input data objects
-data_folder = '/mnt/c/Users/PKerins.Local/World Resources Institute/OceanData - Documents/modified_data/land-cover-change'
+data_folder = os.getenv("DOWNLOAD_DIR")
 calcs_16 = os.path.join(data_folder, 'land-cover-change-areas-by-territory_2015-2016_gadm.csv')
 calcs_17 = os.path.join(data_folder, 'land-cover-change-areas-by-territory_2016-2017_gadm.csv')
 calcs_18 = os.path.join(data_folder, 'land-cover-change-areas-by-territory_2017-2018_gadm.csv')
