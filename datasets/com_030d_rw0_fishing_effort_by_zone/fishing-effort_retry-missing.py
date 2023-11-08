@@ -50,9 +50,9 @@ set_default_credentials(username=CARTO_USER,
                         api_key=CARTO_KEY)
 
 # fixed items defined by gfw
-INITIATE_REPORT_ENDPOINT = 'https://gateway.api.globalfishingwatch.org//v1/reports'
-INQUIRE_STATUS_ENDPOINT = 'https://gateway.api.globalfishingwatch.org//v1/reports/{}'
-RETRIEVE_URL_ENDPOINT = 'https://gateway.api.globalfishingwatch.org//v1/reports/{}/url'
+INITIATE_REPORT_ENDPOINT = 'https://gateway.api.globalfishingwatch.org/v2/reports'
+INQUIRE_STATUS_ENDPOINT = 'https://gateway.api.globalfishingwatch.org/v2/reports/{}'
+RETRIEVE_URL_ENDPOINT = 'https://gateway.api.globalfishingwatch.org/v2/reports/{}/url'
 
 # related objects
 INITIATE_REPORT_HEADERS = {

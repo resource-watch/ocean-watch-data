@@ -39,7 +39,7 @@ set_default_credentials(username=CARTO_USER,
                         api_key=CARTO_KEY)
 
 # fixed items defined by gfw
-INITIATE_REPORT_ENDPOINT = 'https://gateway.api.globalfishingwatch.org/v1/4wings/report?spatialResolution=low&temporalResolution=yearly&groupBy=flag&datasets[0]=public-global-fishing-effort:latest&date-range={year}-01-01,{year}-12-31&format=json'
+INITIATE_REPORT_ENDPOINT = 'https://gateway.api.globalfishingwatch.org/v2/4wings/report?spatialResolution=low&temporalResolution=yearly&groupBy=flag&datasets[0]=public-global-fishing-effort:latest&date-range={year}-01-01,{year}-12-31&format=json'
 
 # related objects
 INITIATE_REPORT_HEADERS = {
