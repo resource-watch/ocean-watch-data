@@ -4,6 +4,7 @@ name: Deploy OW Scripts to AWS
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,10 +16,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4.1.1
 
     - name: Run SSH command
-      uses: garygrossgarten/github-action-ssh@v0.5.0
+      uses: appleboy/ssh-action@v1.0.0
       with:
         # Command to execute on the remote server.
         command: sudo /home/ubuntu/scripts/install.sh
@@ -27,4 +28,4 @@ jobs:
         # Username for authentication.
         username: ubuntu
         # File Location or string that contains a private key for either key-based or hostbased user authentication (OpenSSH format)
-        privateKey: ${{secrets.EC2_PRIVATE_KEY}}
+        key: ${{secrets.EC2_PRIVATE_KEY}}
